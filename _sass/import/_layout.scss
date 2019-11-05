@@ -65,7 +65,7 @@ button {
   height: 50px;
   background-color: #2c2c2c;
   .top-bar {
-    &.expanded .lnb {
+    &.expanded {
       display: block;
     }
   }
@@ -108,13 +108,13 @@ button {
       }
     }
   }
-  .lnb {
+  .top-bar-section {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
     top: 50px;
-    .menu {
+    .right {
       box-shadow: 0 2px 3px 0 rgba(187, 193, 198, 0.4);
       background-color: #fff;
       text-align: center;
@@ -135,7 +135,7 @@ button {
     }
   }
 }
-#spot {
+#masthead {
   position: relative;
   height: 380px;
   margin-bottom: 20px;
@@ -144,7 +144,7 @@ button {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  .image_area .text {
+  .row .text {
     position: absolute;
     left: 0;
     right: 0;
@@ -154,5 +154,10 @@ button {
     background-size: 484px auto;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    @media screen and (max-width: 484px) {
+      left: 20px;
+      right: 20px;
+      background-size: 100% auto;
+    }
   }
 }
